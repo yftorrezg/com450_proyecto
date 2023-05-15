@@ -4,7 +4,7 @@ use CodeIgniter\Config\BaseConfig;
 use CodeIgniter\Session\Handlers\FileHandler;
 class App extends BaseConfig
 {
-    public string $baseURL = 'http://localhost/CrudBilioteca/public';
+    public string $baseURL = 'http://localhost/com450/public';
     public array $allowedHostnames = [];
     public string $indexPage = 'index.php';
     public string $uriProtocol = 'REQUEST_URI';
