@@ -65,6 +65,17 @@
         
     </div>
 
+    <!-- Si el usuario es fer go to: admin -->
+    <?php if($userInfo['user']['name'] == 'fer'): ?>
+        <div class="row">
+            <div class="col-md-8 offset-md-2 bg-success" style="margin-top:30px">
+                <div class="text-center p-4 font-bold text-white">
+                    <a class="text-center p-4 font-bold text-white" href="<?php echo base_url('admin') ?>">Admin</a>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+    
     
 
 </div>

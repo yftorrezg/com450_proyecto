@@ -7,7 +7,7 @@ if (is_file(SYSTEMPATH . 'Config/Routes.php')) {
     require SYSTEMPATH . 'Config/Routes.php';
 }
 /*
- * Router Setup
+ * Router Setup 
  */
 $routes->setDefaultNamespace('App\Controllers');
 $routes->setDefaultController('Home');
@@ -30,6 +30,15 @@ $routes->post('check', 'AuthController::check', ['as' => 'check']);
 
 $routes->get('logout', 'AuthController::logout', ['as' => 'logout']);
 $routes->get('home', 'UserController::index', ['as' => 'home']);
+
+// Admin
+$routes->get('admin', 'AdminController::index', ['as' => 'admin']);
+$routes->get('admin/users', 'AdminController::users', ['as' => 'users']);
+$routes->get('admin/users/edit/(:num)', 'AdminController::edit/$1', ['as' => 'edit']);
+$routes->post('admin/users/update', 'AdminController::update', ['as' => 'update']);
+$routes->get('admin/users/delete/(:num)', 'AdminController::delete/$1', ['as' => 'delete']);
+
+ 
 
 // Libros
 $routes->get('listar', 'Libros::index');
